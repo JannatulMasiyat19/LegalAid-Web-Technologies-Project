@@ -386,12 +386,12 @@ Through this project, the team demonstrates practical understanding of:
 
 ### 🏠 Landing Page
 
-<img width="539" height="253" alt="image" src="https://github.com/user-attachments/assets/04afcdc9-050e-44d5-b4ec-205beb0dc564" />
+<img width="958" height="433" alt="image" src="https://github.com/user-attachments/assets/97e20dba-755e-4120-a694-dad12186334e" />
 
 
 ### 🔐 Login Page
 
-<img width="539" height="257" alt="image" src="https://github.com/user-attachments/assets/4ee72851-d7bc-413c-98fb-71f0e24b973e" />
+<img width="958" height="433" alt="image" src="https://github.com/user-attachments/assets/d2e25fbe-8449-4966-b14a-d4bbaf6d98d1" />
 
 
 ### 👤 Client Dashboard
