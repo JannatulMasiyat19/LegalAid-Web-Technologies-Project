@@ -1,4 +1,4 @@
-# <img width="15" height="15" alt="logo-icon-512" src="https://github.com/user-attachments/assets/1f527729-d739-4c24-988f-509056c8e63b" />
+# <img width="20" height="20" alt="logo-icon-512" src="https://github.com/user-attachments/assets/1f527729-d739-4c24-988f-509056c8e63b" />
  LegalAid — Online Lawyer Booking and Legal Case Management System
 
 A web-based legal service platform designed to connect clients with lawyers, simplify appointment booking, and provide an organized system for managing legal cases, reports, and user accounts.
