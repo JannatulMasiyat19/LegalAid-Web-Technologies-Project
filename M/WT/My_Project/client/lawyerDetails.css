@@ -1,0 +1,1151 @@
+/* =========================================
+   GOOGLE FONTS
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap');
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+
+    background: #F4F6FC;
+
+    color: #1B1F3B;
+}
+
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   APP
+========================================= */
+
+.app {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 84px;
+
+    min-width: 84px;
+
+    height: 100vh;
+
+    background: #12173B;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 24px 0;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* =========================================
+   SIDEBAR LOGO
+========================================= */
+
+.sidebar-logo {
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 34px;
+}
+
+
+.sidebar-logo img {
+    width: 40px;
+
+    height: 40px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   SIDEBAR NAVIGATION
+========================================= */
+
+.sidebar-nav {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =========================================
+   NAVIGATION LINK
+========================================= */
+
+.nav-link {
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #7C82AA;
+
+    position: relative;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   ACTIVE NAVIGATION LINK
+========================================= */
+
+.nav-link.active {
+    background: #3B57F2;
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   NAV ICON
+========================================= */
+
+.nav-icon {
+    width: 21px;
+
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.nav-icon svg {
+    width: 21px;
+
+    height: 21px;
+
+    display: block;
+}
+
+
+/* =========================================
+   NAV TOOLTIP
+========================================= */
+
+.nav-tooltip {
+    position: absolute;
+
+    left: 58px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: #1B1F3B;
+
+    color: #FFFFFF;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    padding: 7px 10px;
+
+    border-radius: 7px;
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+
+    z-index: 2000;
+}
+
+
+.nav-link:hover .nav-tooltip {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================================
+   SIDEBAR BOTTOM
+   LOGOUT
+========================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main {
+    width: calc(100% - 84px);
+
+    margin-left: 84px;
+
+    min-height: 100vh;
+
+    padding: 32px 40px 24px;
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 36px;
+}
+
+
+.topbar h1 {
+    font-family: "Sora", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: #1B1F3B;
+
+    margin-bottom: 4px;
+}
+
+
+.subtitle {
+    font-size: 13px;
+
+    color: #8A90A8;
+}
+
+
+/* =========================================
+   ACCOUNT
+========================================= */
+
+.account {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.account-info {
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: right;
+}
+
+
+.account-name {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #1B1F3B;
+}
+
+
+.account-role {
+    font-size: 11px;
+
+    color: #8A90A8;
+
+    margin-top: 2px;
+}
+
+
+.avatar {
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #EAEDFF;
+
+    color: #3B57F2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: "Sora", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.page-heading {
+    max-width: 1100px;
+
+    margin: 0 auto 22px;
+}
+
+
+.page-heading h2 {
+    font-family: "Sora", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    color: #1B1F3B;
+
+    margin-top: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.page-heading p {
+    font-size: 14px;
+
+    color: #8A90A8;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BACK TO DASHBOARD
+========================================= */
+
+.back-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #3B57F2;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.back-link:hover {
+    opacity: 0.75;
+}
+
+
+.back-icon {
+    width: 18px;
+
+    height: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.back-icon svg {
+    width: 17px;
+
+    height: 17px;
+}
+
+
+/* =========================================
+   DETAILS CARD
+========================================= */
+
+.details-card {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E7EAF5;
+
+    border-radius: 14px;
+
+    padding: 28px 30px;
+
+    box-shadow:
+        0 4px 18px rgba(18, 23, 59, 0.03);
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.section-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 23px;
+}
+
+
+.section-icon {
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #EAEDFF;
+
+    color: #3B57F2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.section-icon svg {
+    width: 20px;
+
+    height: 20px;
+}
+
+
+.section-header h3 {
+    font-family: "Sora", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #1B1F3B;
+
+    margin-bottom: 3px;
+}
+
+
+.section-header p {
+    font-size: 12px;
+
+    color: #8A90A8;
+}
+
+
+/* =========================================
+   DETAILS GRID
+========================================= */
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px 35px;
+}
+
+
+/* =========================================
+   DETAIL ITEM
+========================================= */
+
+.detail-item {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   DETAIL LABEL
+========================================= */
+
+.detail-label {
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #8A90A8;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   DETAIL VALUE
+========================================= */
+
+.detail-value {
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #1B1F3B;
+
+    line-height: 1.6;
+
+    word-break: break-word;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* =========================================
+   CLIENT AVATAR
+========================================= */
+
+.lawyer-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-weight: 600;
+}
+
+
+.person-avatar {
+    width: 32px;
+
+    height: 32px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #EAEDFF;
+
+    color: #3B57F2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: "Sora", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INLINE ICON
+========================================= */
+
+.inline-icon {
+    width: 18px;
+
+    height: 18px;
+
+    color: #8A90A8;
+
+    display: inline-flex;
+
+    flex-shrink: 0;
+}
+
+
+.inline-icon svg {
+    width: 18px;
+
+    height: 18px;
+}
+
+
+/* =========================================
+   FEE
+========================================= */
+
+.fee {
+    color: #3B57F2;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SECTION DIVIDER
+========================================= */
+
+.section-divider {
+    height: 1px;
+
+    background: #E7EAF5;
+
+    margin: 28px 0;
+}
+
+
+/* =========================================
+   APPOINTMENT INFO GRID
+========================================= */
+
+.appointment-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+/* =========================================
+   INFO BOX
+========================================= */
+
+.info-box {
+    min-height: 92px;
+
+    background: #F8F9FD;
+
+    border: 1px solid #E7EAF5;
+
+    border-radius: 11px;
+
+    padding: 17px;
+}
+
+
+/* =========================================
+   INFO LABEL
+========================================= */
+
+.info-label {
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #8A90A8;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 9px;
+}
+
+
+/* =========================================
+   INFO VALUE
+========================================= */
+
+.info-value {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #1B1F3B;
+
+    line-height: 1.6;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   STATUS TAG
+========================================= */
+
+.status-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background: #EAEDFF;
+
+    color: #3B57F2;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-transform: capitalize;
+}
+
+
+/* =========================================
+   REASON BOX
+========================================= */
+
+.reason-box {
+    grid-column: span 3;
+
+    min-height: auto;
+}
+
+
+/* =========================================
+   EMPTY CARD
+========================================= */
+
+.empty-card {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E7EAF5;
+
+    border-radius: 14px;
+
+    padding: 55px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 18px rgba(18, 23, 59, 0.03);
+}
+
+
+.empty-icon {
+    width: 54px;
+
+    height: 54px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background: #EAEDFF;
+
+    color: #3B57F2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.empty-icon svg {
+    width: 25px;
+
+    height: 25px;
+}
+
+
+.empty-card h3 {
+    font-family: "Sora", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #1B1F3B;
+
+    margin-bottom: 8px;
+}
+
+
+.empty-card p {
+    max-width: 480px;
+
+    margin: 0 auto;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #8A90A8;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    max-width: 1100px;
+
+    margin: 28px auto 0;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #E7EAF5;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    color: #A0A5B8;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .main {
+        padding: 28px 25px 24px;
+    }
+
+
+    .details-card {
+        padding: 25px;
+    }
+
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .appointment-info-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .reason-box {
+        grid-column: span 2;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 640px) {
+
+    .sidebar {
+        width: 70px;
+
+        min-width: 70px;
+
+        padding: 20px 0;
+    }
+
+
+    .sidebar-logo {
+        margin-bottom: 25px;
+    }
+
+
+    .nav-link {
+        width: 42px;
+
+        height: 42px;
+    }
+
+
+    .nav-tooltip {
+        display: none;
+    }
+
+
+    .main {
+        width: calc(100% - 70px);
+
+        margin-left: 70px;
+
+        padding: 22px 16px 20px;
+    }
+
+
+    .topbar {
+        margin-bottom: 28px;
+    }
+
+
+    .topbar h1 {
+        font-size: 19px;
+    }
+
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+
+    .account-info {
+        display: none;
+    }
+
+
+    .avatar {
+        width: 36px;
+
+        height: 36px;
+    }
+
+
+    .page-heading {
+        margin-bottom: 18px;
+    }
+
+
+    .page-heading h2 {
+        font-size: 21px;
+    }
+
+
+    .page-heading p {
+        font-size: 13px;
+    }
+
+
+    .details-card {
+        padding: 20px;
+
+        border-radius: 12px;
+    }
+
+
+    .section-header {
+        margin-bottom: 18px;
+    }
+
+
+    .section-header h3 {
+        font-size: 14px;
+    }
+
+
+    .section-header p {
+        font-size: 11px;
+    }
+
+
+    .details-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .appointment-info-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .reason-box {
+        grid-column: span 1;
+    }
+
+
+    .section-divider {
+        margin: 23px 0;
+    }
+
+
+    .info-box {
+        min-height: auto;
+    }
+
+
+    .empty-card {
+        padding: 40px 20px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 430px) {
+
+    .sidebar {
+        width: 62px;
+
+        min-width: 62px;
+    }
+
+
+    .main {
+        width: calc(100% - 62px);
+
+        margin-left: 62px;
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .sidebar-logo {
+        width: 36px;
+
+        height: 36px;
+    }
+
+
+    .sidebar-logo img {
+        width: 36px;
+
+        height: 36px;
+    }
+
+
+    .nav-link {
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    .details-card {
+        padding: 17px;
+    }
+
+
+    .page-heading h2 {
+        font-size: 19px;
+    }
+
+
+    .back-link {
+        font-size: 12px;
+    }
+
+}

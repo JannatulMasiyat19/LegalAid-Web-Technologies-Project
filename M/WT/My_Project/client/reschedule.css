@@ -1,0 +1,968 @@
+/* =========================================
+   GOOGLE FONTS
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap');
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+
+    background: #F4F6FC;
+
+    color: #1B1F3B;
+}
+
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   APP
+========================================= */
+
+.app {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 84px;
+
+    min-width: 84px;
+
+    height: 100vh;
+
+    background: #12173B;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 24px 0;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* =========================================
+   SIDEBAR LOGO
+========================================= */
+
+.sidebar-logo {
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 34px;
+}
+
+
+.sidebar-logo img {
+    width: 40px;
+
+    height: 40px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   SIDEBAR NAVIGATION
+========================================= */
+
+.sidebar-nav {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =========================================
+   NAVIGATION LINK
+========================================= */
+
+.nav-link {
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #7C82AA;
+
+    position: relative;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
+
+.nav-link.active {
+    background: #3B57F2;
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   NAV ICON
+========================================= */
+
+.nav-icon {
+    width: 21px;
+
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.nav-icon svg {
+    width: 21px;
+
+    height: 21px;
+
+    display: block;
+}
+
+
+/* =========================================
+   NAV TOOLTIP
+========================================= */
+
+.nav-tooltip {
+    position: absolute;
+
+    left: 58px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: #1B1F3B;
+
+    color: #FFFFFF;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    padding: 7px 10px;
+
+    border-radius: 7px;
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+
+    z-index: 2000;
+}
+
+
+.nav-link:hover .nav-tooltip {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================================
+   SIDEBAR BOTTOM
+========================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main {
+    width: calc(100% - 84px);
+
+    margin-left: 84px;
+
+    min-height: 100vh;
+
+    padding: 32px 40px 24px;
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 36px;
+}
+
+
+.topbar h1 {
+    font-family: "Sora", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: #1B1F3B;
+
+    margin-bottom: 4px;
+}
+
+
+.subtitle {
+    font-size: 13px;
+
+    color: #8A90A8;
+}
+
+
+/* =========================================
+   ACCOUNT
+========================================= */
+
+.account {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.account-info {
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: right;
+}
+
+
+.account-name {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #1B1F3B;
+}
+
+
+.account-role {
+    font-size: 11px;
+
+    color: #8A90A8;
+
+    margin-top: 2px;
+}
+
+
+.avatar {
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #EAEDFF;
+
+    color: #3B57F2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: "Sora", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.page-heading {
+    max-width: 900px;
+
+    margin: 0 auto 22px;
+}
+
+
+.page-heading h2 {
+    font-family: "Sora", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    color: #1B1F3B;
+
+    margin-top: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.page-heading p {
+    font-size: 14px;
+
+    color: #8A90A8;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.back-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #3B57F2;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.back-link:hover {
+    opacity: 0.75;
+}
+
+
+.back-icon {
+    width: 18px;
+
+    height: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.back-icon svg {
+    width: 17px;
+
+    height: 17px;
+}
+
+
+/* =========================================
+   RESCHEDULE CARD
+========================================= */
+
+.reschedule-card {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E7EAF5;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 4px 18px rgba(18, 23, 59, 0.03);
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.card-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding-bottom: 23px;
+
+    border-bottom: 1px solid #E7EAF5;
+
+    margin-bottom: 24px;
+}
+
+
+.card-icon {
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: #EAEDFF;
+
+    color: #3B57F2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.card-icon svg {
+    width: 21px;
+
+    height: 21px;
+}
+
+
+.card-header h3 {
+    font-family: "Sora", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #1B1F3B;
+
+    margin-bottom: 4px;
+}
+
+
+.card-header p {
+    font-size: 12px;
+
+    color: #8A90A8;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 12px 14px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    margin-bottom: 24px;
+}
+
+
+.message.success {
+    background: #EEF9F2;
+
+    border: 1px solid #D4F0DC;
+
+    color: #2C8A4B;
+}
+
+
+.message.error {
+    background: #FFF1F1;
+
+    border: 1px solid #F4D5D5;
+
+    color: #C64B4B;
+}
+
+
+.message-dot {
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.reschedule-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.form-group label {
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #1B1F3B;
+}
+
+
+.form-group input {
+    width: 100%;
+
+    height: 46px;
+
+    border: 1px solid #E0E4F0;
+
+    border-radius: 9px;
+
+    background: #FFFFFF;
+
+    color: #1B1F3B;
+
+    padding: 0 13px;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.form-group input:hover {
+    border-color: #C9CEE0;
+}
+
+
+.form-group input:focus {
+    border-color: #3B57F2;
+
+    box-shadow:
+        0 0 0 3px rgba(59, 87, 242, 0.08);
+}
+
+
+/* =========================================
+   FORM HINT
+========================================= */
+
+.form-hint {
+    font-size: 11px;
+
+    color: #9AA0B4;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.form-actions {
+    padding-top: 5px;
+
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.submit-button {
+    min-height: 44px;
+
+    padding: 0 21px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #3B57F2;
+
+    color: #FFFFFF;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.submit-button:hover {
+    background: #2F48D8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(59, 87, 242, 0.18);
+}
+
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    max-width: 900px;
+
+    margin: 28px auto 0;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #E7EAF5;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    color: #A0A5B8;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .main {
+        padding: 28px 25px 24px;
+    }
+
+
+    .reschedule-card {
+        padding: 25px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 640px) {
+
+    .sidebar {
+        width: 70px;
+
+        min-width: 70px;
+
+        padding: 20px 0;
+    }
+
+
+    .sidebar-logo {
+        margin-bottom: 25px;
+    }
+
+
+    .nav-link {
+        width: 42px;
+
+        height: 42px;
+    }
+
+
+    .nav-tooltip {
+        display: none;
+    }
+
+
+    .main {
+        width: calc(100% - 70px);
+
+        margin-left: 70px;
+
+        padding: 22px 16px 20px;
+    }
+
+
+    .topbar {
+        margin-bottom: 28px;
+    }
+
+
+    .topbar h1 {
+        font-size: 19px;
+    }
+
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+
+    .account-info {
+        display: none;
+    }
+
+
+    .avatar {
+        width: 36px;
+
+        height: 36px;
+    }
+
+
+    .page-heading {
+        margin-bottom: 18px;
+    }
+
+
+    .page-heading h2 {
+        font-size: 21px;
+    }
+
+
+    .page-heading p {
+        font-size: 13px;
+    }
+
+
+    .reschedule-card {
+        padding: 20px;
+
+        border-radius: 12px;
+    }
+
+
+    .card-header {
+        padding-bottom: 19px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .card-header h3 {
+        font-size: 14px;
+    }
+
+
+    .card-header p {
+        font-size: 11px;
+    }
+
+
+    .form-actions {
+        justify-content: stretch;
+    }
+
+
+    .submit-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 430px) {
+
+    .sidebar {
+        width: 62px;
+
+        min-width: 62px;
+    }
+
+
+    .main {
+        width: calc(100% - 62px);
+
+        margin-left: 62px;
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .sidebar-logo {
+        width: 36px;
+
+        height: 36px;
+    }
+
+
+    .sidebar-logo img {
+        width: 36px;
+
+        height: 36px;
+    }
+
+
+    .nav-link {
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    .reschedule-card {
+        padding: 17px;
+    }
+
+
+    .page-heading h2 {
+        font-size: 19px;
+    }
+
+
+    .back-link {
+        font-size: 12px;
+    }
+
+}

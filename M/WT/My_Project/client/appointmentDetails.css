@@ -1,0 +1,1147 @@
+/* =========================================================
+   LegalAid - Appointment Details
+   Shared Client Dashboard Design
+   ========================================================= */
+
+
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+
+:root{
+
+    --sidebar: #12173B;
+
+    --sidebar-icon: #7C82AA;
+
+    --sidebar-icon-active: #FFFFFF;
+
+    --accent: #3B57F2;
+
+    --accent-soft: #EAEDFF;
+
+    --bg: #F4F6FC;
+
+    --card: #FFFFFF;
+
+    --text: #1B1F3B;
+
+    --muted: #8A90A8;
+
+    --border: #E7EAF5;
+
+    --success: #16845B;
+
+    --success-soft: #E8F7F0;
+
+    --danger: #D94B5B;
+
+    --danger-soft: #FDECEE;
+
+    --radius: 14px;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*{
+    box-sizing: border-box;
+}
+
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+
+body{
+
+    font-family: 'Inter',
+                 Arial,
+                 sans-serif;
+
+    background-color: var(--bg);
+
+    color: var(--text);
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+select,
+textarea{
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   APP
+   ========================================================= */
+
+.app{
+
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar{
+
+    width: 84px;
+
+    flex-shrink: 0;
+
+    background-color: var(--sidebar);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 24px 0;
+}
+
+
+/* =========================================================
+   SIDEBAR LOGO
+   ========================================================= */
+
+.sidebar-logo{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 36px;
+}
+
+
+.sidebar-logo img{
+
+    width: 40px;
+
+    height: 40px;
+
+    display: block;
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.sidebar-nav{
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    flex-grow: 1;
+
+    width: 100%;
+}
+
+
+.sidebar-nav li{
+
+    width: 100%;
+}
+
+
+.sidebar-nav li a{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 44px;
+
+    height: 44px;
+
+    margin: 0 auto;
+
+    border-radius: 10px;
+
+    color: var(--sidebar-icon);
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease;
+}
+
+
+.sidebar-nav li a svg{
+
+    width: 20px;
+
+    height: 20px;
+}
+
+
+.sidebar-nav li a:hover{
+
+    background-color:
+        rgba(255,255,255,0.08);
+
+    color:
+        var(--sidebar-icon-active);
+}
+
+
+.sidebar-nav li.active a{
+
+    background-color:
+        var(--accent);
+
+    color:
+        var(--sidebar-icon-active);
+}
+
+
+/* =========================================================
+   SIDEBAR LOGOUT
+   ========================================================= */
+
+.sidebar-bottom{
+
+    margin-top: auto;
+}
+
+
+.sidebar-bottom a{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 10px;
+
+    color: var(--sidebar-icon);
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease;
+}
+
+
+.sidebar-bottom a svg{
+
+    width: 20px;
+
+    height: 20px;
+}
+
+
+.sidebar-bottom a:hover{
+
+    background-color:
+        rgba(255,255,255,0.08);
+
+    color:
+        var(--sidebar-icon-active);
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.main{
+
+    flex-grow: 1;
+
+    padding: 32px 40px 24px;
+
+    max-width: 1100px;
+}
+
+
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+
+.topbar{
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin-bottom: 26px;
+}
+
+
+.topbar h1{
+
+    font-family:
+        'Sora',
+        'Inter',
+        Arial,
+        sans-serif;
+
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+.subtitle{
+
+    margin: 4px 0 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ACCOUNT
+   ========================================================= */
+
+.account{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.account-info{
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 2px;
+}
+
+
+.account-name{
+
+    font-weight: 600;
+
+    font-size: 14px;
+}
+
+
+.account-role{
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+.avatar{
+
+    width: 36px;
+
+    height: 36px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    color: white;
+
+    font-family:
+        'Sora',
+        sans-serif;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PAGE HEADING
+   ========================================================= */
+
+.page-heading{
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+
+.page-heading h2{
+
+    margin: 8px 0 4px;
+
+    font-family:
+        'Sora',
+        'Inter',
+        Arial,
+        sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: var(--text);
+}
+
+
+.page-heading p{
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BACK LINK
+   ========================================================= */
+
+.back-link{
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--muted);
+
+    transition:
+        color 0.15s ease;
+}
+
+
+.back-link svg{
+
+    width: 16px;
+
+    height: 16px;
+}
+
+
+.back-link:hover{
+
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   DETAILS CARD
+   ========================================================= */
+
+.details-card{
+
+    background-color: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 26px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(18, 23, 59, 0.025);
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.section-header{
+
+    margin-bottom: 20px;
+}
+
+
+.section-header h3{
+
+    margin: 0 0 5px;
+
+    font-family:
+        'Sora',
+        'Inter',
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: var(--text);
+}
+
+
+.section-header p{
+
+    margin: 0;
+
+    font-size: 13px;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   DETAILS GRID
+   ========================================================= */
+
+.details-grid{
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 0;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.detail-item{
+
+    min-height: 82px;
+
+    padding: 17px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.detail-item:nth-child(odd){
+
+    border-right: 1px solid var(--border);
+}
+
+
+.detail-item:nth-last-child(-n+2){
+
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.detail-label{
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+
+    color: var(--muted);
+}
+
+
+.detail-value{
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: var(--text);
+
+    line-height: 1.5;
+}
+
+
+.fee{
+
+    font-weight: 600;
+
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   LAWYER NAME
+   ========================================================= */
+
+.lawyer-name{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.person-avatar{
+
+    width: 32px;
+
+    height: 32px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: var(--accent-soft);
+
+    color: var(--accent);
+
+    font-family:
+        'Sora',
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   TAG
+   ========================================================= */
+
+.tag{
+
+    display: inline-block;
+
+    width: fit-content;
+
+    background-color: var(--accent-soft);
+
+    color: var(--accent);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SECTION DIVIDER
+   ========================================================= */
+
+.section-divider{
+
+    height: 1px;
+
+    background-color: var(--border);
+
+    margin: 28px 0;
+}
+
+
+/* =========================================================
+   APPOINTMENT INFORMATION
+   ========================================================= */
+
+.appointment-info-grid{
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+
+.info-box{
+
+    padding: 17px;
+
+    background-color: #FAFBFE;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.info-label{
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+
+    color: var(--muted);
+}
+
+
+.info-value{
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status-tag{
+
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    background-color: var(--accent-soft);
+
+    color: var(--accent);
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   REASON
+   ========================================================= */
+
+.reason-box{
+
+    margin-top: 18px;
+
+    padding: 18px;
+
+    background-color: #FAFBFE;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+}
+
+
+.reason-box p{
+
+    margin: 9px 0 0;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-card{
+
+    background-color: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 50px 30px;
+
+    text-align: center;
+}
+
+
+.empty-icon{
+
+    width: 42px;
+
+    height: 42px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background-color: var(--accent-soft);
+
+    color: var(--accent);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family:
+        'Sora',
+        sans-serif;
+
+    font-weight: 700;
+}
+
+
+.empty-card h3{
+
+    margin: 0 0 8px;
+
+    font-family:
+        'Sora',
+        sans-serif;
+
+    font-size: 17px;
+}
+
+
+.empty-card p{
+
+    margin: 0 auto 20px;
+
+    max-width: 450px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.button{
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px 16px;
+
+    border-radius: 9px;
+
+    background-color: var(--accent);
+
+    color: #FFFFFF;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+.button:hover{
+
+    background-color: #3049D8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer{
+
+    margin-top: 24px;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px){
+
+    .main{
+
+        padding: 28px 25px 22px;
+
+    }
+
+
+    .details-grid{
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .detail-item:nth-child(odd){
+
+        border-right: none;
+
+    }
+
+
+    .detail-item:nth-last-child(-n+2){
+
+        border-bottom: 1px solid var(--border);
+
+    }
+
+
+    .detail-item:last-child{
+
+        border-bottom: none;
+
+    }
+
+
+    .appointment-info-grid{
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px){
+
+    .sidebar{
+
+        width: 70px;
+
+        padding: 20px 0;
+
+    }
+
+
+    .sidebar-logo{
+
+        margin-bottom: 28px;
+
+    }
+
+
+    .sidebar-logo img{
+
+        width: 36px;
+
+        height: 36px;
+
+    }
+
+
+    .sidebar-nav li a,
+    .sidebar-bottom a{
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+
+    .sidebar-nav li a svg,
+    .sidebar-bottom a svg{
+
+        width: 19px;
+
+        height: 19px;
+
+    }
+
+
+    .main{
+
+        padding: 22px 16px 20px;
+
+    }
+
+
+    .topbar{
+
+        margin-bottom: 22px;
+
+    }
+
+
+    .topbar h1{
+
+        font-size: 19px;
+
+    }
+
+
+    .subtitle{
+
+        font-size: 12px;
+
+    }
+
+
+    .account-info{
+
+        display: none;
+
+    }
+
+
+    .page-heading{
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .page-heading h2{
+
+        font-size: 21px;
+
+    }
+
+
+    .page-heading p{
+
+        font-size: 13px;
+
+    }
+
+
+    .details-card{
+
+        padding: 18px;
+
+    }
+
+
+    .section-header h3{
+
+        font-size: 15px;
+
+    }
+
+
+    .detail-item{
+
+        padding: 15px;
+
+    }
+
+
+    .footer{
+
+        margin-top: 20px;
+
+    }
+
+}
